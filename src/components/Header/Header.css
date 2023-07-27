@@ -1,0 +1,9 @@
+.container-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80px;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
