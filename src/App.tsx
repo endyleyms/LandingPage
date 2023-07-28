@@ -34,7 +34,9 @@ function App() {
           <AssociationCard key={i} CardTitle={item.title} description={item.description} />
         ))}
       </div>
-      <Work />
+      <div>
+        <Work />
+      </div>
     </>
   )
 }
