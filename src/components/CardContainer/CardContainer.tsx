@@ -1,10 +1,12 @@
 
 import { useState } from "react"
+import { useTranslation } from 'react-i18next';
 import Card from "../Card/Card"
 import './CardContainer.css'
 import CardView from "../CardView/CardView"
 
 const CardContainer = () => {
+  const { t } = useTranslation();
   const [selected, setSelected] = useState('')
   const handleClick = (id: string) => {
     setSelected(id)
@@ -39,11 +41,11 @@ const CardContainer = () => {
 
   return (
     <div className="cardcontainer">
-      <Card title="Brand" onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
-      <Card title="Product" onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
-      <Card title="Motion" onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
+      <Card title={t('card.title1')} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
+      <Card title={t('card.title2')} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
+      <Card title={t('card.title3')} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
       <CardView
-        title="WHAT WE DO - WHAT WE DO - WHAT WE DO - WHAT WE DO -"
+        title={t('card.title4')}
         currentSelected={selected}
         randomImage={randomImage} />
     </div>

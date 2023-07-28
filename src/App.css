@@ -25,8 +25,24 @@
 }
 
 @media (max-width: 768px) {
-  .container-header{
-    position: relative;
-    top:100
+  .container-title{
+    height: 30%;
+    font-size: 15px;
+    width: 70%;
+  }
+  .container-associations{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 390px) {
+  .container-title{
+    height: 30%;
+    font-size: 15px;
+    width: 70%;
+  }
+  .container-associations{
+    display: flex;
+    flex-direction: column;
   }
 }

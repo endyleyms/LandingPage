@@ -1,12 +1,13 @@
+import './AssociationCard.css'
 import Card from 'react-bootstrap/Card';
 
-const AssociationCard = (props: { CardTitle: string, description: string }) => {
-  const { CardTitle = '', description = '' } = props
+const AssociationCard = (props: { CardImg: string, description: string }) => {
+  const { CardImg = '', description = '' } = props
   return (
-    <Card style={{ width: '90%', height: '80%', }}>
-      <Card.Img variant="top" src={CardTitle} style={{ width: '80%', height: '40%', padding: '20px' }} />
+    <Card className='card-container'>
+      <Card.Img variant="top" src={CardImg} className='card-img-container' />
       <Card.Body>
-        <Card.Text>
+        <Card.Text className='card-text'>
           {description}
         </Card.Text>
       </Card.Body>

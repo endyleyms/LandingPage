@@ -1,4 +1,4 @@
-.container{
+.container-paralax{
   background-color: white;
   align-items: center;
   min-width: 100vw;
@@ -47,4 +47,25 @@
   display: flex;
   justify-content: center;
   border-top: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+  .work-title{
+    font-size: 200px;
+  }
+  .container-image{
+    width: 40%;
+    height: 90%;
+    z-index: 1;
+  }
+}
+@media (max-width: 390px) {
+  .work-title{
+    font-size: 100px;
+  }
+  .container-image{
+    width: 70%;
+    height: 50%;
+    z-index: 1;
+  }
 }

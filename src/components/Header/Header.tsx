@@ -1,10 +1,18 @@
 import { useState } from "react";
+import { useTranslation, } from 'react-i18next';
+import Button from 'react-bootstrap/Button';
 import { BsSearch, } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 import './Header.css'
 import Acordion from "../Acordion/Acordion";
 
+const lngs = {
+  en: { nativeName: 'EN' },
+  es: { nativeName: 'ES' }
+};
+
 const Header = () => {
+  const { i18n, t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,15 +27,19 @@ const Header = () => {
         <div>VASS</div>
         <div className={`nav ${isMenuOpen ? 'isActive' : ''}`}>
           <ul className="ulListas">
-            <li className="liListas">Casos de éxito</li>
-            <li className="liListas"><Acordion title='Mercados' options={undefined} /> </li>
-            <li className="liListas"><Acordion title='Paises' options={countries} /></li>
-            <li className="liListas"><Acordion title='Somos VASS' options={undefined} /></li>
-            <li className="liListas"><Acordion title='Cómo lo hacemos' options={undefined} /></li>
-            <li className="liListas">Insights</li>
-            <li className="liListas">Noticias</li>
-            <li className="liListas">VASS Research</li>
-            <li className="liListas">EN</li>
+            <li className="liListas">{t('header.h1')}</li>
+            <li className="liListas"><Acordion title={t('header.h2')} options={undefined} /> </li>
+            <li className="liListas"><Acordion title={t('header.h3')} options={countries} /></li>
+            <li className="liListas"><Acordion title={t('header.h4')} options={undefined} /></li>
+            <li className="liListas"><Acordion title={t('header.h5')} options={undefined} /></li>
+            <li className="liListas">{t('header.h6')}</li>
+            <li className="liListas">{t('header.h7')}</li>
+            <li className="liListas">{t('header.h8')}</li>
+            <li className="liListas">
+              {Object.keys(lngs).map((lng) => (
+                <Button variant="dark" key={lng} onClick={() => i18n.changeLanguage(lng)}> {lngs[lng].nativeName} </Button>
+              ))}
+            </li>
           </ul>
         </div>
         <div className="boton-search">
