@@ -1,6 +1,6 @@
 import { BsSearch } from "react-icons/bs";
 import './Header.css'
-import Acordion from './Acordion/acordion'
+import Acordion from "../Acordion/Acordion";
 
 const Header = () => {
   const countries = ['Colombia', 'España', 'Chile', 'México', 'Perú', 'Reino Unido']
