@@ -14,7 +14,6 @@ const CardView = (props: {
 
   const lengthCurrent = currentSelected.length
 
-  console.log(currentSelected)
 
 
 

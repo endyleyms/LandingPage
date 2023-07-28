@@ -8,8 +8,19 @@
   position: fixed;
   top: 0;
   min-width: 100vw;
+  z-index: 1;
 }
-/* .container-image{
-  width: 100%;
-} */
+.container-title{
+  text-align:start;
+  height: 50vh;
+  width: 40%;
+  padding: 30px;
+  font-size: 20px;
+}
+.container-associations{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5px;
+  padding-left: 30px;
+}
 

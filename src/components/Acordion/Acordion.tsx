@@ -10,10 +10,9 @@ const Acordion = (props: { title: string, options: any }) => {
           {title}
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          {/* {options?.map((item) => {
-            <Dropdown.Item >{item}</Dropdown.Item>
-          })} */}
-          <Dropdown.Item >{options[0]}</Dropdown.Item>
+          {options?.map((item: string, i: number) => (
+            <Dropdown.Item key={i}>{item}</Dropdown.Item>
+          ))}
         </Dropdown.Menu>
       </Dropdown>
     </div>

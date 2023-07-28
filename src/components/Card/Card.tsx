@@ -10,11 +10,11 @@ const Card = (props: {
   const { title = '', onClick, currentSelected, imagesObject, selectRandomImage } = props
 
   const handleSelect = () => {
-    currentSelected === "Brand" && title === "Brand" ?
+    currentSelected === "Brand" ?
       selectRandomImage(imagesObject.Brand)
-      : currentSelected === "Product" && title === "Product" ?
+      : currentSelected === "Product" ?
         selectRandomImage(imagesObject.Product)
-        : currentSelected === "Motion" && title === "Motion" &&
+        : currentSelected === "Motion" &&
         selectRandomImage(imagesObject.Motion)
   }
 
