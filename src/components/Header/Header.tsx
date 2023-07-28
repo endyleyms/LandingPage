@@ -1,23 +1,40 @@
-import { BsSearch } from "react-icons/bs";
+import { useState } from "react";
+import { BsSearch, } from "react-icons/bs";
+import { AiOutlineMenu } from "react-icons/ai";
 import './Header.css'
 import Acordion from "../Acordion/Acordion";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   const countries = ['Colombia', 'España', 'Chile', 'México', 'Perú', 'Reino Unido']
 
   return (
-    <div className='container-header'>
-      <div>VASS</div>
-      <div>Casos de éxito</div>
-      <div><Acordion title='Mercados' options={undefined} /> </div>
-      <div><Acordion title='Paises' options={countries} /></div>
-      <div><Acordion title='Somos VASS' options={undefined} /></div>
-      <div><Acordion title='Cómo lo hacemos' options={undefined} /></div>
-      <div>Insights</div>
-      <div>Noticias</div>
-      <div>VASS Research</div>
-      <div>EN</div>
-      <BsSearch />
+    <div>
+      <div className='container-headercomponent'>
+        <div>VASS</div>
+        <div className={`nav ${isMenuOpen ? 'isActive' : ''}`}>
+          <ul className="ulListas">
+            <li className="liListas">Casos de éxito</li>
+            <li className="liListas"><Acordion title='Mercados' options={undefined} /> </li>
+            <li className="liListas"><Acordion title='Paises' options={countries} /></li>
+            <li className="liListas"><Acordion title='Somos VASS' options={undefined} /></li>
+            <li className="liListas"><Acordion title='Cómo lo hacemos' options={undefined} /></li>
+            <li className="liListas">Insights</li>
+            <li className="liListas">Noticias</li>
+            <li className="liListas">VASS Research</li>
+            <li className="liListas">EN</li>
+          </ul>
+        </div>
+        <div className="boton-search">
+          <BsSearch size={20} />
+        </div>
+      </div>
+      <AiOutlineMenu id="header__menu-btn-responsive" onClick={toggleMenu} size={40} />
     </div>
   )
 }

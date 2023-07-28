@@ -5,4 +5,17 @@
   height: 80vh;
   align-items: center;
   padding: 20px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .container-card{
+    height: 40vh;
+    width: 100%;
+  }
+}
+@media (max-width: 390px) {
+  .container-card{
+    height: 30vh;
+    width: 100%;
+  }
 }
