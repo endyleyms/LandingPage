@@ -22,7 +22,6 @@ const FormInfo = () => {
     } else {
       console.log('Se envia')
     }
-    // regex to identify if the input has an email as text value
   };
 
   return (

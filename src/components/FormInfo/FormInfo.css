@@ -27,3 +27,19 @@
   width: 400px;
   height: 50px;
 }
+@media (max-width: 768px) {
+  .form{
+    flex-direction: column;
+  }
+  .mb-3{
+    width: 83%;
+  }
+}
+@media (max-width: 390px) {
+  .form{
+    flex-direction: column;
+  }
+  .mb-3{
+    width: 83%;
+  }
+}
