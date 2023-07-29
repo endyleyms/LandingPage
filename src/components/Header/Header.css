@@ -38,9 +38,10 @@
     margin-top: 20px;
   }
   .container-headercomponent{
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
   .nav{
+    position: absolute;
     width: 100%;
     display: none;
   }
@@ -71,12 +72,25 @@
 
 }
 @media (max-width: 390px) {
+  #header__menu-btn-responsive {
+    display: initial;
+    position: absolute;
+    color: white;
+    top:0;
+    margin-right:10px;
+    margin-top: 20px;
+  }
+  .nav{
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
   .ulListas {
     margin-left: 190px;
     width: 50%;
     margin-top: 350px;
   }
   .container-headercomponent{
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
 }

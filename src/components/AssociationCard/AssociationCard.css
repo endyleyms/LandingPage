@@ -9,9 +9,6 @@
 }
 @media (max-width: 768px) {
   .card--association-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     height: 250px;
   }
   .card-img-container{
@@ -26,9 +23,6 @@
 }
 @media (max-width: 390px) {
   .card--association-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     height: 200px;
   }
   .card-img-container{
