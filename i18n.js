@@ -21,6 +21,7 @@ i18n
         translation: {
           welcome: {
             title: "We partner with forward-thinking enterprises and starups",
+            title2: "We are excited to drive your digital transformation",
           },
           header: {
             h1: "Success stories",
@@ -59,6 +60,15 @@ i18n
             text5: "Take a look at what",
             text6: "we can do for",
           },
+          form: {
+            name: "Name and Lastname",
+            email: "Email",
+            company: "Company / Organization",
+            country: "Country",
+            phone: "Phone number",
+            message: "Message",
+            required: "Required",
+          },
           // here we will place our translations...
         },
       },
@@ -67,6 +77,7 @@ i18n
           welcome: {
             title:
               "Nos asociamos con empresas y nuevas empresas con visión de futuro",
+            title2: "Nos emociona impulsar tu transformación digital",
           },
           header: {
             h1: "Casos de éxito",
@@ -105,6 +116,15 @@ i18n
             text4: "TTRANSFORMA TECNOLOGÍA COMPLEJA EN DISEÑO SIGNIFICATIVO",
             text5: "Mira lo qué",
             text6: "podemos hacer por",
+          },
+          form: {
+            name: "Nombre y apellido",
+            email: "Correo electrónico",
+            company: "Empresa / Organización",
+            country: "Pais",
+            phone: "Teléfono o celular",
+            message: "Mensaje",
+            required: "El campo es requerido",
           },
         },
       },

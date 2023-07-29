@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useTranslation, } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
 import { BsSearch, } from "react-icons/bs";
@@ -12,6 +13,7 @@ const lngs = {
 };
 
 const Header = () => {
+  const navigation = useNavigate();
   const { i18n, t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,8 +26,8 @@ const Header = () => {
   return (
     <div>
       <div className='container-headercomponent'>
-        <div>VASS</div>
-        <Button variant="dark">{t('header.h9')}</Button>
+        <Button variant="dark" onClick={() => navigation('/')}>VASS</Button>
+        <Button variant="dark" onClick={() => navigation('/info')}>{t('header.h9')}</Button>
         <div className={`nav ${isMenuOpen ? 'isActive' : ''}`}>
           <ul className="ulListas">
             <li className="liListas">{t('header.h1')}</li>
@@ -37,8 +39,8 @@ const Header = () => {
             <li className="liListas">{t('header.h7')}</li>
             <li className="liListas">{t('header.h8')}</li>
             <li className="liListas">
-              {Object.keys(lngs).map((lng) => (
-                <Button variant="dark" key={lng} onClick={() => i18n.changeLanguage(lng)}> {lngs[lng].nativeName} </Button>
+              {Object.keys(lngs).map((lng: string) => (
+                <Button variant={i18n.resolvedLanguage === lng ? "light" : "dark"} key={lng} onClick={() => i18n.changeLanguage(lng)}> {lngs[lng].nativeName} </Button>
               ))}
             </li>
           </ul>
