@@ -41,9 +41,9 @@ const CardContainer = () => {
 
   return (
     <div className="cardcontainer">
-      <Card title={t('card.title1')} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
-      <Card title={t('card.title2')} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
-      <Card title={t('card.title3')} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
+      <Card title={t('card.title1')} text={"Brand"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
+      <Card title={t('card.title2')} text={"Product"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
+      <Card title={t('card.title3')} text={"Motion"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
       <CardView
         title={t('card.title4')}
         currentSelected={selected}

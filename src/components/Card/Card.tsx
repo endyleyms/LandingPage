@@ -1,13 +1,14 @@
 import { BsFillArrowRightCircleFill, BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import './Card.css'
 const Card = (props: {
+  text: string
   title: string,
   onClick: CallableFunction,
   currentSelected: string,
   imagesObject: object | any,
   selectRandomImage: CallableFunction,
 }) => {
-  const { title = '', onClick, currentSelected, imagesObject, selectRandomImage } = props
+  const { title = '', onClick, currentSelected, imagesObject, selectRandomImage, text } = props
 
   const handleSelect = () => {
     currentSelected === "Brand" ?
@@ -18,9 +19,9 @@ const Card = (props: {
         selectRandomImage(imagesObject.Motion)
   }
 
-  const isSelected = currentSelected === title
+  const isSelected = currentSelected === text
   const handleClick = () => {
-    onClick(isSelected ? " " : title)
+    onClick(isSelected ? " " : text)
     handleSelect();
   }
 

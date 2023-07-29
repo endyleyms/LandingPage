@@ -31,6 +31,7 @@ i18n
             h6: "Insights",
             h7: "News",
             h8: "VASS Research",
+            h9: "Know more",
           },
           card: {
             title1: "Brand",
@@ -76,6 +77,7 @@ i18n
             h6: "Insignias",
             h7: "Noticias",
             h8: "Investigación VASS",
+            h9: "Conoce más",
           },
           card: {
             title1: "Marca",

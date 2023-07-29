@@ -25,6 +25,7 @@ const Header = () => {
     <div>
       <div className='container-headercomponent'>
         <div>VASS</div>
+        <Button variant="dark">{t('header.h9')}</Button>
         <div className={`nav ${isMenuOpen ? 'isActive' : ''}`}>
           <ul className="ulListas">
             <li className="liListas">{t('header.h1')}</li>
