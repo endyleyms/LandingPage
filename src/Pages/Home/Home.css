@@ -12,7 +12,7 @@
 }
 .container-title{
   text-align:start;
-  height: 50vh;
+  min-height: 50vh;
   width: 40%;
   padding: 30px;
   font-size: 20px;
