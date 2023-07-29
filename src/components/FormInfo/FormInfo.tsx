@@ -14,7 +14,7 @@ const FormInfo = () => {
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (!name && !email && !company && !country && !phone) {
       setError(`${t('form.required')}`);
