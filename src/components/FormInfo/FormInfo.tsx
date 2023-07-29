@@ -14,7 +14,7 @@ const FormInfo = () => {
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!name && !email && !company && !country && !phone) {
       setError(`${t('form.required')}`);
@@ -103,7 +103,7 @@ const FormInfo = () => {
             <Form.Label className='form-label'>{t('form.message')}</Form.Label>
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
-          <Button variant="dark" type="submit" className='button' onClick={handleSubmit}>
+          <Button variant="dark" type="submit" className='button'>
             Enviar
           </Button>
         </div>

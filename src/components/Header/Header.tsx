@@ -7,7 +7,11 @@ import { AiOutlineMenu } from "react-icons/ai";
 import './Header.css'
 import Acordion from "../Acordion/Acordion";
 
-const lngs = {
+interface LanguageObject {
+  [key: string]: { nativeName: string };
+}
+
+const lngs: LanguageObject = {
   en: { nativeName: 'EN' },
   es: { nativeName: 'ES' }
 };
@@ -39,7 +43,7 @@ const Header = () => {
             <li className="liListas">{t('header.h7')}</li>
             <li className="liListas">{t('header.h8')}</li>
             <li className="liListas">
-              {Object.keys(lngs).map((lng: string) => (
+              {Object.keys(lngs).map((lng) => (
                 <Button variant={i18n.resolvedLanguage === lng ? "light" : "dark"} key={lng} onClick={() => i18n.changeLanguage(lng)}> {lngs[lng].nativeName} </Button>
               ))}
             </li>

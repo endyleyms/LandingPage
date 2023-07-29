@@ -5,7 +5,6 @@ import Header from '../../components/Header/Header'
 import CardContainer from '../../components/CardContainer/CardContainer';
 import AssociationCard from '../../components/AssociationCard/AssociationCard';
 import Work from '../../components/Work/Work';
-import Footer from '../../components/Footer/Footer';
 
 
 
@@ -41,7 +40,6 @@ function Home() {
       <div>
         <Work />
       </div>
-      <Footer />
     </>
   )
 }
