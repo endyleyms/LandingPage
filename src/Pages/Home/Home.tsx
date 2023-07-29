@@ -29,7 +29,7 @@ function Home() {
       <div style={{ padding: '10px', paddingTop: '10px' }}>
         <CardContainer />
       </div>
-      <div className='container-title'>
+      <div className='container-title-home'>
         <h1>{t('welcome.title')}</h1>
       </div>
       <div className='container-associations'>
