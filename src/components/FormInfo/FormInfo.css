@@ -40,6 +40,9 @@
     flex-direction: column;
   }
   .mb-3{
-    width: 83%;
+    width: 85%;
+  }
+  .input{
+  width: 250px;
   }
 }
