@@ -63,7 +63,7 @@ i18n
           form: {
             name: "Name and Lastname",
             email: "Email",
-            company: "Company / Organization",
+            company: "Company",
             country: "Country",
             phone: "Phone number",
             message: "Message",
@@ -120,7 +120,7 @@ i18n
           form: {
             name: "Nombre y apellido",
             email: "Correo electrónico",
-            company: "Empresa / Organización",
+            company: "Empresa",
             country: "Pais",
             phone: "Teléfono o celular",
             message: "Mensaje",
