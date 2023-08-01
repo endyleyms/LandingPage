@@ -14,9 +14,6 @@ const CardView = (props: {
 
   const lengthCurrent = currentSelected.length
 
-
-
-
   return (
     <>
       {lengthCurrent <= 1 ?

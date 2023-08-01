@@ -8,16 +8,14 @@ import CardView from "../CardView/CardView"
 const CardContainer = () => {
   const { t } = useTranslation();
   const [selected, setSelected] = useState('')
-  const handleClick = (id: string) => {
+  const handleClick = (id: string, arrayImages: string) => {
     setSelected(id)
+    const randomIndex = Math.floor(Math.random() * arrayImages.length);
+    setRandomImage(arrayImages[randomIndex]);
   }
 
   const [randomImage, setRandomImage] = useState("");
 
-  const selectRandomImage = (arrayImages: string | any[]) => {
-    const randomIndex = Math.floor(Math.random() * arrayImages.length);
-    setRandomImage(arrayImages[randomIndex]);
-  }
   const Brand = [
     'https://i.pinimg.com/474x/36/fc/c7/36fcc71da5c51613a1addab82580665c.jpg',
     'https://i.pinimg.com/474x/e8/78/83/e8788343739ee604b623a3ea76142616.jpg',
@@ -41,9 +39,9 @@ const CardContainer = () => {
 
   return (
     <div className="cardcontainer">
-      <Card title={t('card.title1')} text={"Brand"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
-      <Card title={t('card.title2')} text={"Product"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
-      <Card title={t('card.title3')} text={"Motion"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} selectRandomImage={selectRandomImage} />
+      <Card title={t('card.title1')} text={"Brand"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} />
+      <Card title={t('card.title2')} text={"Product"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} />
+      <Card title={t('card.title3')} text={"Motion"} onClick={handleClick} currentSelected={selected} imagesObject={imagesObject} />
       <CardView
         title={t('card.title4')}
         currentSelected={selected}

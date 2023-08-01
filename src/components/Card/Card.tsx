@@ -6,23 +6,30 @@ const Card = (props: {
   onClick: CallableFunction,
   currentSelected: string,
   imagesObject: object | any,
-  selectRandomImage: CallableFunction,
 }) => {
-  const { title = '', onClick, currentSelected, imagesObject, selectRandomImage, text } = props
+  const { title = '', onClick, currentSelected, imagesObject, text } = props
+
+
+
+  const isBrand = currentSelected === "Brand"
+  const isProduct = currentSelected === "Product"
 
   const handleSelect = () => {
-    currentSelected === "Brand" ?
-      selectRandomImage(imagesObject.Brand)
-      : currentSelected === "Product" ?
-        selectRandomImage(imagesObject.Product)
-        : currentSelected === "Motion" &&
-        selectRandomImage(imagesObject.Motion)
+    if (isBrand) {
+      return imagesObject.Brand
+    } else if (isProduct) {
+      return imagesObject.Product
+    } else {
+      return imagesObject.Motion
+    }
   }
 
   const isSelected = currentSelected === text
   const handleClick = () => {
-    onClick(isSelected ? " " : text)
-    handleSelect();
+    onClick(
+      isSelected ? " " : text,
+      handleSelect()
+    )
   }
 
 
