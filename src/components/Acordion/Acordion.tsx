@@ -6,7 +6,7 @@ const Acordion = (props: { title: string, options: any }) => {
   return (
     <div className='acordion'>
       <Dropdown>
-        <Dropdown.Toggle variant="dark" id="dropdown-basic">
+        <Dropdown.Toggle variant="dark" id="dropdown-basic" style={{ backgroundColor: 'black' }}>
           {title}
         </Dropdown.Toggle>
         <Dropdown.Menu>

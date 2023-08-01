@@ -6,11 +6,13 @@
 .work-title{
   font-size: 400px;
   color: black;
+  place-items: center;
+  padding-top: 50px;
 }
 .container-work{
   place-items: center;
   z-index: 0;
-
+  height: 90%;
 }
 .container-image{
   width: 20%;
