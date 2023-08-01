@@ -24,7 +24,7 @@ function Home() {
         <Header />
       </div>
       <div>
-        <img style={{ width: '100%', height: '80vh' }} src={'	https://i.pinimg.com/564x/b1/12/de/b112de6a194ef834128931a0fbd8f7f5.jpg'} />
+        <img style={{ width: '100%', height: '80%' }} src={'	https://i.pinimg.com/564x/b1/12/de/b112de6a194ef834128931a0fbd8f7f5.jpg'} />
       </div>
       <div style={{ padding: '10px', paddingTop: '10px' }}>
         <CardContainer />

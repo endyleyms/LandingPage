@@ -30,8 +30,8 @@ const Header = () => {
   return (
     <div>
       <div className='container-headercomponent'>
-        <Button variant="dark" onClick={() => navigation('/')}>VASS</Button>
-        <Button variant="dark" onClick={() => navigation('/info')}>{t('header.h9')}</Button>
+        <Button variant="dark" onClick={() => navigation('/')} style={{ backgroundColor: 'black' }}>VASS</Button>
+        <Button variant="dark" onClick={() => navigation('/info')} style={{ backgroundColor: 'black' }}>{t('header.h9')}</Button>
         <div className={`nav ${isMenuOpen ? 'isActive' : ''}`}>
           <ul className="ulListas">
             <li className="liListas">{t('header.h1')}</li>
